@@ -8,12 +8,14 @@ def count_letters(string):
     """Returns a dictionary of how many of each letter is in a string."""
     string_dict = {}
     for ch in string.upper(): # make all upper-case letters
-        if ch not in string_dict: # add letter to dictionary
-            string_dict[ch] = 1
-        else:
-          string_dict[ch] += 1 # counting multiple letters
+        if ch >= "A" and ch <= "Z": # only letters counter
+            if ch not in string_dict: # add letter to dictionary
+                string_dict[ch] = 1
+            else:
+                string_dict[ch] += 1 # counting multiple letters
 
     return string_dict
 
 # print(count_letters("AaBb"))
 # testing
+#print(count_letters("Quis custodiet ipsos custodes?"))
